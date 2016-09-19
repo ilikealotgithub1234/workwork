@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href = "file:///Users/Erik/NHA/js01hw/workwork/story.html"><button>Start over</button></a>
+    <script>
+    var start = function(){
+    var beginplace = prompt('do you go to the (b)uilding (t)oilet or (c)loud?');
+    if(beginplace === "b"){
+      alert('you are at the building');
+
+      var pokenah = prompt("do you (a)ttach pokemon go to a ceiling fan to incubate or (g)et a job at the building?")
+      if(pokenah === "a" ){
+        alert('you meet an instinct and try to bully him. You realize he is level 55. You suddenly rethink your existence. You Win.')
+      }
+      else if (pokenah === "g"){
+        prompt('you get rich after about 5 years and become the person with the highest net worth in the world. Game Over.')
+
+      }
+    }
+    else if (beginplace === "t"){
+      prompt('you are at the toilet do you (s)it on the toilet?')
+      alert('you sit on the toilet. Game Over')
+    }
+    else if (beginplace === "c"){
+      var core = prompt("you are in the cloud. You see Katy Perry. Do you (c)all her a dark horse, or, (e)at flamin cheetos?")
+      if(core === "e"){
+        alert("you win");
+
+      }
+      else if (core === "c"){
+        alert("she ate your heart out like jeffrey dahmer")
+      }
+    }
+
+
+}
+
+    </script>
+  </body>
+</html>
