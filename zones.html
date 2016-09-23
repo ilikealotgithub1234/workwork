@@ -8,6 +8,10 @@
     <a href = "file:///Users/Erik/NHA/js01hw/workwork/story.html"><button>Start over</button></a>
     <script>
     var start = function(){
+    function alertgameover(){
+      alert("restarting game");
+      start();
+    }
     var beginplace = prompt('do you go to the (b)uilding (t)oilet or (c)loud?');
     if(beginplace === "b"){
       alert('you are at the building');
@@ -18,21 +22,27 @@
       }
       else if (pokenah === "g"){
         prompt('you get rich after about 5 years and become the person with the highest net worth in the world. Game Over.')
-
+        alertgameover();
+        ;
       }
     }
     else if (beginplace === "t"){
       prompt('you are at the toilet do you (s)it on the toilet?')
       alert('you sit on the toilet. Game Over')
+      alertgameover();
+
+
     }
     else if (beginplace === "c"){
       var core = prompt("you are in the cloud. You see Katy Perry. Do you (c)all her a dark horse, or, (e)at flamin cheetos?")
       if(core === "e"){
-        alert("you win");
+        alert("you ate it. She fell off the cloud. You Win!")
 
       }
       else if (core === "c"){
-        alert("she ate your heart out like jeffrey dahmer")
+        alert("she ate your heart out like jeffrey dahmer. Game over.")
+        alertgameover();
+        ;
       }
     }
 
