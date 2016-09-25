@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <script>
+
+  for(var i = 0;i < 5;i++){
+
+    var player1 = prompt('player1 what is you choice (rock,paper,scissors)');
+    var player2 = prompt('player2 what is you choice (rock,paper,scissors)');
+    if( player1 === "rock" && player2 ==="rock"){
+      alert('tie')
+    }
+    else if(player1 === "rock" && player2 === "paper"){
+      alert("player2 wins!")
+
+    }
+    else if(player1 === "rock" && player2 === "scissors"){
+      alert("player2 wins!")
+    }
+    else if(player1 === "paper" && player2 === "paper"){
+      alert('tie')
+    }
+    else if (player1 === "paper" && player2 === "rock"){
+      alert("player1 wins!")
+    }
+    else if (player1 === "paper" && player2 === "scissors"){
+      alert("player2 wins!")
+    }
+    else if (player1 === "scissors" && player2 === "scissors"){
+      alert('tie')
+    }
+    else if (player1 === "scissors" && player2 === "paper"){
+      alert("player2 wins")
+    }
+    else if (player1 === "scissors" && player2 === "rock"){
+      alert("player2 wins")
+    }
+  }
+
+
+
+  </script>
+</body>
+</html>

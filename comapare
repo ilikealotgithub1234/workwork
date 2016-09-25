@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    var num1 = prompt('what is your first number?');
+    var num2 = prompt('what is your second number');
+    var num3 = prompt('what is your third number');
+    num1 = Number(num1);
+    num2 = Number(num2)
+    console.log(typeof num1);
+    function compare() {
+      if(num1 > num2){
+        alert(num1 + " is greater than " + num2)
+      }
+      else if(num1 < num2){
+        alert(num2 + " is greater than " + num1)
+      }
+      else if(num1 == num2){
+        alert(num1 + " is equal to " + num2)
+      }
+      else{
+        alert("there was an unknown error");
+      }
+    }
+
+
+
+    </script>
+  </body>
+</html>

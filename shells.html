@@ -1,0 +1,26 @@
+
+<html>
+  <body>
+    <script>
+      var gamesPlayed = 0;
+      var rounds = prompt('how many rounds would you like to play?');
+      var score = 0;
+      
+      while (gamesPlayed < rounds) {
+
+
+        var actual = prompt("Host: Would you like to put the prize under shell A or B or C?")
+        alert("Rearranging shells ...")
+        var guess = prompt("Player: Where do you think the prize is? Shell A or B or C?");
+        if (actual == guess) {
+          alert("Correct!")
+          score++;
+        } else {
+          alert("Nope!");
+        }
+        gamesPlayed++;
+      }
+      alert("Score: " + score + " Game over")
+    </script>
+  </body>
+</html>
