@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script>
+</script>
+  <body>
+    <input id = "noun1">
+    <input id = "noun2">
+    <input id = "noun3">
+    <input id = "occupation">
+    <input id = "place">
+    <input id = "verb">
+    <input id = "past-tense-verb">
+    <input id = "noun4">
+    <input id = "current-tense-verb">
+    <input id = "plural-noun">
+    <input id = "noun5">
+    <input id = "emotion">
+    <button id = "submit" >Get MADDDDDDDDDDDDDDDD</button>
+
+    <script>
+    var libs = {}
+    var inputs = document.body.getElementsByTagName("input");
+    libs.noun1 = "";
+    libs.noun2 = "";
+    libs.noun3 = "";
+    libs.occupation = "";
+    libs.place = "";
+    libs.verb  = "";
+    libs.pasttenseverb = "";
+    libs.noun4 = "";
+    libs.currenttenseverb = "";
+    libs.pluralnoun = "";
+    libs.noun5 = "";
+    libs.emotion = "";
+    var inputs = document.body.getElementsByTagName("input");
+
+    for(var i = 0; i < inputs.length; i++){
+
+      inputs[i].placeholder = inputs[i].id
+
+    }
+
+    $("#submit").on("click",function(){
+          inputs = document.body.getElementsByTagName("input");
+          libs.noun1 = inputs[0]
+          libs.noun2 = inputs[1]
+          libs.noun3 = inputs[2]
+          libs.occupation = inputs[3]
+          libs.place = inputs[4]
+          libs.verb = inputs[5]
+          libs.pasttenseverb = inputs[6]
+          libs.noun4 = inputs[7]
+          libs.currenttenseverb = inputs[8]
+          libs.pluralnoun = inputs[9]
+          libs.emotion = inputs[10]
+          var story = "It was during the battle of " + libs.noun1 +" when I was running through a "+ libs.noun2 +" when a " + libs.noun3 +" went off right next to my platoon. Our " + libs.occupation +" yelled for us to " + libs.verb +" to the nearest " + libs.place +" we could find. When we got to the "+ libs.place +" we "+ libs.pasttenseverb +" to start a fire. As we were starting the fire the enemy saw the "+ libs.noun5 + " from the fire and started " +libs.currenttenseverb + libs.pluralnoun +" at us. we all quickly ducked behind the "+ libs.noun4 +" at the "+ libs.place +" and returned fire. we quickly eliminated the enemy and were " + libs.emotion +" that we had won the battle."
+          alert(story);
+        });
+
+
+
+    </script>
+  </body>
+</html>
