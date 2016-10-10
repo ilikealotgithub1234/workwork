@@ -47,17 +47,20 @@
 
     $("#submit").on("click",function(){
           inputs = document.body.getElementsByTagName("input");
-          libs.noun1 = inputs[0]
-          libs.noun2 = inputs[1]
-          libs.noun3 = inputs[2]
-          libs.occupation = inputs[3]
-          libs.place = inputs[4]
-          libs.verb = inputs[5]
-          libs.pasttenseverb = inputs[6]
-          libs.noun4 = inputs[7]
-          libs.currenttenseverb = inputs[8]
-          libs.pluralnoun = inputs[9]
-          libs.emotion = inputs[10]
+          libs.noun1 = inputs[0].value
+          libs.noun2 = inputs[1].value
+          libs.noun3 = inputs[2].value
+          libs.occupation = inputs[3].value
+          libs.place = inputs[4].value
+          libs.verb = inputs[5].value
+          libs.pasttenseverb = inputs[6].value
+          libs.noun4 = inputs[7].value
+          libs.currenttenseverb = inputs[8].value
+          libs.pluralnoun = inputs[9].value
+          libs.emotion = inputs[10].value
+          /*
+          It was during the battle of arches when I was running through a new york when a house went off right next to my platoon. Our doctor yelled for us to run to the nearest barracks we could find. When we got to the barracks we jumped to start a fire. As we were starting the fire the enemy saw the  from the fire and started sittingshoes at us. we all quickly ducked behind the barack obama at the barracks and returned fire. we quickly eliminated the enemy and were rice that we had won the battle.
+          */
           var story = "It was during the battle of " + libs.noun1 +" when I was running through a "+ libs.noun2 +" when a " + libs.noun3 +" went off right next to my platoon. Our " + libs.occupation +" yelled for us to " + libs.verb +" to the nearest " + libs.place +" we could find. When we got to the "+ libs.place +" we "+ libs.pasttenseverb +" to start a fire. As we were starting the fire the enemy saw the "+ libs.noun5 + " from the fire and started " +libs.currenttenseverb + libs.pluralnoun +" at us. we all quickly ducked behind the "+ libs.noun4 +" at the "+ libs.place +" and returned fire. we quickly eliminated the enemy and were " + libs.emotion +" that we had won the battle."
           alert(story);
         });
