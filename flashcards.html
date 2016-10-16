@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: Helvetica;
+        text-align: center;
+      }
+      #card {
+        width: 500px;
+        padding: 120px 0;
+        margin: 50px auto;
+        border: 5px solid darkseagreen;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card"></div>
+    <input type="text" id="answer"/>
+    <button id = "submit">Answer</button>
+<script>
+  var card = $("#card")
+  var actualanswer = ["thoghtworks","chipotle","samsung galaxy", "jonah"];
+  var question = ["nanos gather here","nanos food sponsor","this phone is known for blowing up recently","js team blue mentor"];
+  var answer = $("#answer").val()
+  $("#submit").on("click",function(){
+    for(var i = 0;i < actalanswer.length; i++)
+    answer = $("answer").val();
+    card.text() = question[i]
+    if (answer === actualans[i]){
+      alert("CORRECT");
+    }
+    else{
+      alert("INCORRECT")
+    }
+  }
+)
+</script>
+
+  </body>
+</html>
