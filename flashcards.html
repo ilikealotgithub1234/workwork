@@ -21,20 +21,24 @@
     <input type="text" id="answer"/>
     <button id = "submit">Answer</button>
 <script>
-  var card = $("#card")
-  var actualanswer = ["thoghtworks","chipotle","samsung galaxy", "jonah"];
+  var i = 0;
+  var card = $("#card");
+  var actualanswer = ["thoughtworks","chipotle","samsung galaxy", "jonah"];
   var question = ["nanos gather here","nanos food sponsor","this phone is known for blowing up recently","js team blue mentor"];
-  var answer = $("#answer").val()
+  var answer = $("#answer").val();
+  card.text(question[0]);
   $("#submit").on("click",function(){
-    for(var i = 0;i < actalanswer.length; i++)
     answer = $("answer").val();
-    card.text() = question[i]
-    if (answer === actualans[i]){
+    card.text(question[i]);
+    if (answer === actualanswer[i]){
       alert("CORRECT");
+      i++;
     }
     else{
-      alert("INCORRECT")
+      alert("INCORRECT");
+
     }
+
   }
 )
 </script>
