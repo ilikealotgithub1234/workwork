@@ -21,26 +21,40 @@
     <input type="text" id="answer"/>
     <button id = "submit">Answer</button>
 <script>
-  var i = 0;
-  var card = $("#card");
-  var actualanswer = ["thoughtworks","chipotle","samsung galaxy", "jonah"];
-  var question = ["nanos gather here","nanos food sponsor","this phone is known for blowing up recently","js team blue mentor"];
-  var answer = $("#answer").val();
-  card.text(question[0]);
-  $("#submit").on("click",function(){
-    answer = $("answer").val();
+  cheat = false;
+  const card = $("#card");
+  function qanda(){
+    let i = 0;
+
+    const actualanswer = ["thoughtworks","chipotle","samsung galaxy", "jonah"];
+    const question = ["nanos gather here","nanos food sponsor","this phone is known for blowing up recently","js team blue mentor"];
+    let answer = $("#answer").val();
     card.text(question[i]);
-    if (answer === actualanswer[i]){
-      alert("CORRECT");
-      i++;
-    }
-    else{
-      alert("INCORRECT");
+    $("#submit").on("click",function(){
+      answer = $("answer").val();
+      card.text(question[i]);
+      if (answer === actualanswer[i] || cheat === true){
+        alert("CORRECT");
+        i++;
+      }
+      else{
+        alert("INCORRECT");
+
+      }
 
     }
+
+  )
+  }
+  function mathqanda(){
+    var rand1 = Math.floor(Math.random()*10)
+    var rand2 = Math.floor(Math.random()*10)
+    var randq = " Question: "+rand1+" + "+rand2 +" = ";
+    var randa = rand1 + rand2
+    card.text(randq)s
 
   }
-)
+
 </script>
 
   </body>
