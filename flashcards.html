@@ -24,16 +24,22 @@
   let cheat = false;
   let answer = $("#answer").val();
   const card = $("#card");
+  let i = 0;
   function qanda(){
-    let i = 0;
+
     const actualanswer = ["thoughtworks","chipotle","samsung galaxy", "jonah"];
     const question = ["nanos gather here","nanos food sponsor","this phone is known for blowing up recently","js team blue mentor"];
     card.text(question[i]);
     $("#submit").on("click",function(){
-      card.text(question[i]);
+      answer = $("#answer").val();
+
+      alert(answer);
       if (answer === actualanswer[i] || cheat === true){
         alert("CORRECT");
         i++;
+        card.text(question[i]);
+        
+
       }
       else{
         alert("INCORRECT");
