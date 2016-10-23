@@ -9,11 +9,12 @@
     <script>
     function collision(){
       alert("You win")
+      console.log("cheese")
     }
     function start(){
       Crafty.init()
 
-      var player = Crafty.e("2D, DOM, Color, Twoway, Gravity, Solid, Collision");
+      var player = Crafty.e("2D, DOM, Color, Twoway, Gravity, Solid, Collision, Player");
       player.attr( {
         x:100,
         y:100,
@@ -31,7 +32,7 @@
       var goal = Crafty.e("2D, DOM, Color, Solid, Collision")
       goal.attr({ x:500,y:300,w:25,h:25})
       goal.color("Green")
-      goal.onhit("Player","collision")
+      goal.onHit("Player","collision")
     }
     window.onload = start;
 
