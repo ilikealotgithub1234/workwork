@@ -38,7 +38,7 @@
         alert("CORRECT");
         i++;
         card.text(question[i]);
-        
+
 
       }
       else{
@@ -51,13 +51,14 @@
   )
 }
 function mathqanda(){
-  let rand1 = Math.floor(Math.random()*10)
-  let rand2 = Math.floor(Math.random()*10)
+  let rand1 = Math.floor(Math.random()*10);
+  let rand2 = Math.floor(Math.random()*10);
   let randq = " Question: "+rand1+" + "+rand2 +" = ";
-  let randa = rand1 + rand2
+  let randa = rand1 + rand2;
   card.text(randq)
-  card.on('click',function(){
-    answer = $("#answer").val();
+  $("#submit").on('click',function(){
+    answer = Number($("#answer").val());
+    console.log(answer)
     if(answer === randa || cheat === true){
       alert("CORRECT")
 
