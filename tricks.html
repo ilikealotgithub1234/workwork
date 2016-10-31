@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Images</title>
+    <script src="https://rawgit.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+  </head>
+  <body>
+    <script>
+    var i = 0;
+      function start() {
+        Crafty.audio.add("wow","wow.wav")
+        while(i<200){
+        Crafty.audio.play("wow");
+         sleep(1000);
+        i++
+        }
+
+
+        Crafty.init()
+        let player = Crafty.e("2D, DOM, Color, Image, Fourway, Player").image("http://vignette2.wikia.nocookie.net/r2d/images/7/7f/Illuminati_glasses.png/revision/latest?cb=20141030125614nocookie.net/geometry-dash/images/d/d1/Cube25.png/revision/latest?cb=20150327090858")
+        player.attr({x:200, y:300, h:0, w:0})
+
+      }
+
+      window.onload = start;
+    </script>
+  </body>
+</html>
