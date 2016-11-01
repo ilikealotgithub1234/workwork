@@ -26,23 +26,30 @@ function win(){
     alert("You're winner")
     console.log("cheese")
     i++
+    Crafty.audio.play("WOW")
+    Crafty.enterScene("level two");
   }
 
-  else{
+  else if (i === 1){
     alert("Next level Initiate")
 
   }
 }
 function start(){
   Crafty.init()
-  let player = Crafty.e("2D, DOM, Color, Twoway, Gravity, Solid, Collision, Player, Image").image("firstanim-walking copy.gif");
+  Crafty.defineScene("first level", function(attributes) {
+
+
+  Crafty.audio.add("WOW", "wow.wav");
+
+  let player = Crafty.e("2D, DOM, Color, Twoway, Gravity, Solid, Collision, Player");
   player.attr( {
     x:100,
     y:100,
     w:50,
     h:25
   });
-
+  player.color("purple")
   player.twoway();
   player.gravity("Platform")
 
@@ -61,6 +68,18 @@ function start(){
   let platform4 = Crafty.e("Platform ,2D, DOM, Color, Collision")
   platform4.attr({ x : 400, y : 150, w : 238, h : 25});
   platform4.color("blue");
+
+  let platform5 = Crafty.e("Platform ,2D, DOM, Color, Collision")
+  platform5.attr({ x : 400, y : 150, w : 238, h : 25});
+  platform5.color("blue");
+
+  let platform6 = Crafty.e("Platform ,2D, DOM, Color, Collision")
+  platform6.attr({ x : 200, y : 400, w : 238, h : 25});
+  platform6.color("blue");
+
+  let platform7 = Crafty.e("Platform ,2D, DOM, Color, Collision")
+  platform7.attr({ x : 800, y : 400, w : 238, h : 25});
+  platform7.color("blue");
   /*
   platform.onhit("Player", platformcollide)
   platform2.onhit("Player", platformcollide)
@@ -68,14 +87,16 @@ function start(){
   platform4.onhit("Player", platformcollide)
   */
   let goal = Crafty.e("2D, DOM, Color, Solid, Collision")
-  goal.attr({ x:500,y:300,w:25,h:25})
+  goal.attr({ x:1000,y:300,w:75,h:25})
   goal.color("Green")
 
   goal.onHit("Player",win)
+  });
+  Crafty.defineScene("level two", function(attributes) {
 
-
-
+  });
 }
+Crafty.enterScene("first level")
 window.onload = start;
 </script>
 </body>
