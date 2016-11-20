@@ -37,67 +37,90 @@ function win(){
 }
 function start(){
   Crafty.init()
-  Crafty.defineScene("first level", function(attributes) {
+  Crafty.defineScene("first level", function() {
+    Crafty.background("#000000");
+    //var ent = Crafty.e("2D, DOM, Image").image("firstanim-walking.gif");
 
 
-  Crafty.audio.add("WOW", "wow.wav");
+    Crafty.audio.add("WOW", "wow.wav");
 
-  let player = Crafty.e("2D, DOM, Color, Twoway, Gravity, Solid, Collision, Player");
-  player.attr( {
-    x:100,
-    y:100,
-    w:50,
-    h:25
+    let player = Crafty.e("2D, DOM, Color, Twoway, Gravity, Solid, Collision, Player, Image").image("firstanim-walking.gif");
+    player.attr( {
+      x:100,
+      y:100,
+      w:0,
+      h:0
+    });
+    player.color("purple")
+    player.twoway();
+    player.gravity("Platform")
+
+    let platform = Crafty.e("Platform ,2D, DOM, Color, Collision")
+    platform.attr({ x : 100, y : 200, w : 250, h : 25});
+    platform.color("blue");
+
+    let platform2 = Crafty.e("Platform ,2D, DOM, Color, Collision")
+    platform2.attr({ x : 400, y : 150, w : 238, h : 25});
+    platform2.color("blue");
+
+    let platform3 = Crafty.e("Platform ,2D, DOM, Color, Collision")
+    platform3.attr({ x : 850, y : 150, w : 200, h : 25});
+    platform3.color("blue");
+
+    let platform4 = Crafty.e("Platform ,2D, DOM, Color, Collision")
+    platform4.attr({ x : 400, y : 150, w : 238, h : 25});
+    platform4.color("blue");
+
+    let platform5 = Crafty.e("Platform ,2D, DOM, Color, Collision")
+    platform5.attr({ x : 400, y : 150, w : 238, h : 25});
+    platform5.color("blue");
+
+    let platform6 = Crafty.e("Platform ,2D, DOM, Color, Collision")
+    platform6.attr({ x : 200, y : 400, w : 238, h : 25});
+    platform6.color("blue");
+
+    let platform7 = Crafty.e("Platform ,2D, DOM, Color, Collision")
+    platform7.attr({ x : 800, y : 400, w : 238, h : 25});
+    platform7.color("blue");
+    /*
+    platform.onhit("Player", platformcollide)
+    platform2.onhit("Player", platformcollide)
+    platform3.onhit("Player", platformcollide)
+    platform4.onhit("Player", platformcollide)
+    */
+    let goal = Crafty.e("2D, DOM, Color, Solid, Collision")
+    goal.attr({ x:1000,y:300,w:75,h:25})
+    goal.color("Green")
+
+    goal.onHit("Player",win)
   });
-  player.color("purple")
-  player.twoway();
-  player.gravity("Platform")
 
-  let platform = Crafty.e("Platform ,2D, DOM, Color, Collision")
-  platform.attr({ x : 100, y : 200, w : 250, h : 25});
-  platform.color("blue");
-
-  let platform2 = Crafty.e("Platform ,2D, DOM, Color, Collision")
-  platform2.attr({ x : 400, y : 150, w : 238, h : 25});
-  platform2.color("blue");
-
-  let platform3 = Crafty.e("Platform ,2D, DOM, Color, Collision")
-  platform3.attr({ x : 850, y : 150, w : 200, h : 25});
-  platform3.color("blue");
-
-  let platform4 = Crafty.e("Platform ,2D, DOM, Color, Collision")
-  platform4.attr({ x : 400, y : 150, w : 238, h : 25});
-  platform4.color("blue");
-
-  let platform5 = Crafty.e("Platform ,2D, DOM, Color, Collision")
-  platform5.attr({ x : 400, y : 150, w : 238, h : 25});
-  platform5.color("blue");
-
-  let platform6 = Crafty.e("Platform ,2D, DOM, Color, Collision")
-  platform6.attr({ x : 200, y : 400, w : 238, h : 25});
-  platform6.color("blue");
-
-  let platform7 = Crafty.e("Platform ,2D, DOM, Color, Collision")
-  platform7.attr({ x : 800, y : 400, w : 238, h : 25});
-  platform7.color("blue");
-  /*
-  platform.onhit("Player", platformcollide)
-  platform2.onhit("Player", platformcollide)
-  platform3.onhit("Player", platformcollide)
-  platform4.onhit("Player", platformcollide)
-  */
-  let goal = Crafty.e("2D, DOM, Color, Solid, Collision")
-  goal.attr({ x:1000,y:300,w:75,h:25})
-  goal.color("Green")
-
-  goal.onHit("Player",win)
-  });
-  Crafty.defineScene("level two", function(attributes) {
+  Crafty.defineScene("level two", function() {
+    Crafty.background("#000");
+    var ent = Crafty.e("2D, DOM, Color");
+    ent.attr( {
+      x:100,
+      y:100,
+      w:400,
+      h:400
+    });
+    ent.color("purple")
 
   });
+  // Crafty.defineScene("loading", function() {
+  //   Crafty.background("#000");
+  //   Crafty.e("2D, DOM, Text")
+  //   .attr({ w: 100, h: 20, x: 150, y: 120 })
+  //   .text("Loading")
+  //   .css({ "text-align": "center"})
+  //   .textColor("#FFFFFF");
+  // });
+  //Crafty.enterScene("loading")
+
+  //Crafty.enterScene("first level")
 }
-Crafty.enterScene("first level")
 window.onload = start;
+
 </script>
 </body>
 </html>
